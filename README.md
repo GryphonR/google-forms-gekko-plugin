@@ -30,7 +30,7 @@ As it stands the script doesn't format the sheet and it looks pretty bland. Func
   * Currency Held
   * Portfolio Balance
   * Initial Balance
-* Link the form to a spreadsheet, an rename the responses sheet (tab at the bottom) "Form Responses" (Important it's exact as the code reffers to that sheet by name)
+* Link the form to a spreadsheet, and rename the responses sheet (tab at the bottom) "Form Responses" (Important it's exact as the code reffers to that sheet by name)
 * Open the google script editor (Tools> Script Editor) 
   * Copy in the code from googleSheetsScript.gs. Save it.
   * Go to Edit>Current Project's Triggers. From the dropdowns set it to Run "onFormSubmit" Trigger From "Spreadsheet" "OnFormSubmit" (Theoretically the onFormSubmit function in code should be triggered by this anyway, but it didn't seem to work until I added this trigger manually... ymmv)
