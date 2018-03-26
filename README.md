@@ -44,3 +44,7 @@ As it stands the script doesn't format the sheet and it looks pretty bland. Func
 All done, take it for a spin :) It will log data from paper trader and live trader.
 
 
+
+If you want to leave a tip, go give it to askmike and support gekko! If you've already done that and still want to leave a tip, thanks :)
+
+LTC: Lapmuu1Th2BGBMG6vVyM83swoT8Qc6PiZP
