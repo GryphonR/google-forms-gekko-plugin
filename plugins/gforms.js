@@ -52,11 +52,11 @@ gforms.prototype.processTrade = function(trade) {
     'entry.' + gfc.portfolioBalance + '=' + trade.portfolio.balance + '&' +
     'entry.' + gfc.balance + '=' + trade.balance;
 
-  console.log(this.formUrl + dataString);
+  //console.log(this.formUrl + dataString);
 
   request.post(this.formUrl + dataString + '&submit=Submit', function(error, response) {
-    console.log('error:', error); // Print the error if one occurred
-    console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+    //console.log('error:', error); // Print the error if one occurred
+    //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
   });
 
 
