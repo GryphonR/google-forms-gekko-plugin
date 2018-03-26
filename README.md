@@ -25,11 +25,14 @@ As it stands the script doesn't format the sheet and it looks pretty bland. Func
   * Currency
   * Asset
   * Action
-  * Price
-  * Asset Held
+  * Asset Held 
+  * Price 
   * Currency Held
-  * Portfolio Balance
   * Initial Balance
+  * Portfolio Balance
+  
+NOTE - First version of readme had these in the wrong order which will result in the wrong values in the final sheet - if you followed that, please create a new form with the above order.
+   
 * Link the form to a spreadsheet, and rename the responses sheet (tab at the bottom) "Form Responses" (Important it's exact as the code reffers to that sheet by name)
 * Open the google script editor (Tools> Script Editor) 
   * Copy in the code from googleSheetsScript.gs. Save it.
