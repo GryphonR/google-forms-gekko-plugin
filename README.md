@@ -19,7 +19,7 @@ As it stands the script doesn't format the sheet and it looks pretty bland. Func
 * Copy the code from the downloaded sample-config.js into your CLI config file.
 
 ## Setup in Google Drive
-* Make a copy of the google form (Right Click, Make Copy) into your google drive 
+* Make a copy of [this google form](https://drive.google.com/open?id=1DlRinAn1aix3yNOMrook3m5_B7k_d676) (Right Click, Make Copy) into your google drive 
  **OR**
 * In your Google Drive, create a new Form.
 * Add these questions to the form, each of type 'Short Text'
