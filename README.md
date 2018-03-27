@@ -40,7 +40,7 @@ npm i require
   
 NOTE - First version of readme had these in the wrong order which will result in the wrong values in the final sheet - if you followed that, please create a new form with the above order.
    
-* Once you have copied or made the form, link it to a spreadsheet (small reen button in responses tab), and rename the responses sheet (tab at the bottom) "Form Responses" (Important it's exact as the code reffers to that sheet by name)
+* Once you have copied or made the form, link it to a spreadsheet (small green button in responses tab), and rename the responses sheet (tab at the bottom) "Form Responses" (Important it's exact as the code reffers to that sheet by name)
 * Open the google script editor (Tools> Script Editor) 
   * Copy in the code from googleSheetsScript.gs. Save it.
   * Go to Edit>Current Project's Triggers. From the dropdowns set it to Run "onFormSubmit" Trigger From "Spreadsheet" "OnFormSubmit" (Theoretically the onFormSubmit function in code should be triggered by this anyway, but it didn't seem to work until I added this trigger manually... ymmv)
