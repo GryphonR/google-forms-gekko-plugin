@@ -45,10 +45,10 @@ NOTE - First version of readme had these in the wrong order which will result in
 * Click Get Link, then Copy link in the bottom left popup.
 * Paste this link as a comment in your CLI settings file. Copy the form ID and each question ID into the gforms.config object.
 
-All done, take it for a spin :) It will log data from paper trader and live trader.
+All done, take it for a spin :) 
 
 
 
-If you want to leave a tip, go give it to askmike and support gekko! If you've already done that and still want to leave a tip, thanks :)
+If you want to leave a tip, go give it to askmike and support gekko! If you've already done that and still want to leave a tip, thanks!
 
 LTC: Lapmuu1Th2BGBMG6vVyM83swoT8Qc6PiZP
