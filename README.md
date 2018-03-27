@@ -8,9 +8,7 @@ I started running live CLI tradebots and tracking them through the advice event 
 Setup of this plugin is a little involved, but it works for me and I've seen others asking for simillar functionality, so here's a share.
 
 ## What it does
-Each time gekko completes a live trade it updates a google sheet with the trade price and new balances. One form can be used to submit data from all bots, a new sheet is automatically created for each pair and exchange combination. Each pair sheet has a basic list of trades and overall P/L as well as % profitable trades. Note that the % profitable counts any multiple trades in response to one bit of advice as gekko adjusts it's buy/sell price, so won't align with % profitable advice.
-
-As it stands the script doesn't format the sheet and it looks pretty bland. Function over Form... I'll get round to form later.
+Each time gekko completes a trade (live or paper) it updates a google sheet with the trade price and new balances. One form can be used to submit data from all bots, a new sheet is automatically created for each pair and exchange combination. Each pair sheet has a basic list of trades and overall P/L as well as % profitable trades. Note that the % profitable counts any multiple trades in response to one bit of advice as gekko adjusts it's buy/sell price, so won't align with % profitable advice.
 
 ## Setup in Gekko
 * Download/Clone this repo.
@@ -20,7 +18,8 @@ As it stands the script doesn't format the sheet and it looks pretty bland. Func
 
 ## Setup in Google Drive
 * Make a copy of [this google form](https://drive.google.com/open?id=1DlRinAn1aix3yNOMrook3m5_B7k_d676) (Right Click, Make Copy) into your google drive 
- **OR**
+
+   **OR**
 * In your Google Drive, create a new Form.
 * Add these questions to the form, each of type 'Short Text'
   * Exchange
