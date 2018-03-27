@@ -52,6 +52,7 @@ NOTE - First version of readme had these in the wrong order which will result in
 * Paste this link as a comment in your CLI settings file. Copy the form ID and each question ID into the gforms.config object.
 
 All done, take it for a spin :) 
+Note that it will take a couple of sells before all the sparkline graphs start working properly - until then they'll all read #NA.
 
 
 
