@@ -47,7 +47,7 @@ function addEntry(targetSheet){
   targetSheet.getRange(newRow, 8,1,2).merge();
   if(targetSheet.getRange(newRow,2).getValue() == 'sell')
   {  
-      targetSheet.getRange(newRow,8).setValue('=SPARKLINE(G'+newRow+',{"charttype","bar";"max",$H$2;"color1",IF(G'+newRow+'>0,"green","red");"rtl",IF(G'+newRow+'>0,false,true)};"nan","ignore";"empty","ignore")');
+      targetSheet.getRange(newRow,8).setValue('=SPARKLINE(G'+newRow+',{"charttype","bar";"max",MAX(ABS(H$2),ABS(I$2));"color1",IF(G'+newRow+'>0,"green","red");"rtl",IF(G'+newRow+'>0,false,true);"nan","ignore";"empty","ignore"})');
   }
   
 }
