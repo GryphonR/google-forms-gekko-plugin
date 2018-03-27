@@ -19,6 +19,11 @@ It should look something like this:
 * Copy the contents of the downloaded plugins.js folder into gekko/plugins.js between the existing plugins. This registers the plugin with Gekko
 * Copy the code from the downloaded sample-config.js into your CLI config file.
 
+Finally, the 'require' module is needed - in your gekko root run
+```
+npm i require
+```
+
 ## Setup in Google Drive
 * Make a copy of [this google form](https://drive.google.com/open?id=1DlRinAn1aix3yNOMrook3m5_B7k_d676) (Right Click, Make Copy) into your google drive 
 
