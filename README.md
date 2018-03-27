@@ -6,9 +6,11 @@ A gekko plugin for live trading that submits all trades to a google spreadsheet 
 Setup of this plugin is a little involved, but it works for me and I've seen others asking for simillar functionality, so here's a share.
 
 ## What it does
-Each time gekko completes a trade (live or paper) it updates a google sheet with the trade price and new balances. One form can be used to submit data from all bots, a new sheet is automatically created for each pair and exchange combination. Each pair sheet has a basic list of trades and overall P/L as well as % profitable trades. Note that the % profitable counts any multiple trades in response to one bit of advice as gekko adjusts it's buy/sell price, so won't align with % profitable advice.
+Each time gekko completes a trade (live or paper) it updates a google sheet with the trade price and new balances via a post request to a google form. 
+One form can be used to submit data from all bots, a new sheet is automatically created for each pair and exchange combination. Each sheet has a basic list of trades and overall P/L as well as % profitable trades, as well as some pretty graphs. 
+Note that the % profitable counts any multiple trades in response to one bit of advice as gekko adjusts it's buy/sell price, so won't align with % profitable advice.
 
-It should look something like this:
+Each sheet looks like this:
 ![alt text](https://i.imgur.com/U2K3QPn.png "Unrealistically Successful Example")
 
 ## Setup in Gekko
