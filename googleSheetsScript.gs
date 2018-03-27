@@ -14,7 +14,7 @@ function newSubmission(){
   var targetSheet;
   
   //DEBUG ONLY
-  targetSheetName = "TrialSheet"
+  //targetSheetName = "TrialSheet"
   
   if(ss.getSheetByName(targetSheetName)){
      addEntry(targetSheetName);
