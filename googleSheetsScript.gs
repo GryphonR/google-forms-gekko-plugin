@@ -1,3 +1,18 @@
+//Setup Variables
+
+//Form Response Columns. A=1, B=2 etc...
+timeCol = 1; //Google Generated Timestamp
+actionCol = 5; //Buy or Sell
+priceCol = 7; //Asset Price
+assetHeldCol = 6; //Asset Held
+currHeldCol = 8; //Currency Held
+balanceCol = 9; // Balance
+assetNameCol = 4; //Asset Ticker Name
+currNameCol = 3; //Currency Ticker Name
+exchangeNameCol = 2; //Exchange Name
+
+
+
 ss = SpreadsheetApp.getActiveSpreadsheet();
 formSheet = ss.getSheetByName("Form Responses");
 
@@ -33,14 +48,14 @@ function addEntry(targetSheet){
   var newRow = targetSheet.getLastRow()+1;
   var lastSubmissionRow = formSheet.getLastRow();
   
-  targetSheet.getRange(newRow,1).setValues(formSheet.getRange(lastSubmissionRow,1).getValues());
-  targetSheet.getRange(newRow,2).setValues(formSheet.getRange(lastSubmissionRow,5).getValues());
-  targetSheet.getRange(newRow,3).setValues(formSheet.getRange(lastSubmissionRow,7).getValues());
-  targetSheet.getRange(newRow,4).setValues(formSheet.getRange(lastSubmissionRow,6).getValues());
-  targetSheet.getRange(newRow,5).setValues(formSheet.getRange(lastSubmissionRow,8).getValues());
-  targetSheet.getRange(newRow,6).setValues(formSheet.getRange(lastSubmissionRow,9).getValues());
+  targetSheet.getRange(newRow,1).setValues(formSheet.getRange(lastSubmissionRow,timeCol).getValues());
+  targetSheet.getRange(newRow,2).setValues(formSheet.getRange(lastSubmissionRow,actionCol).getValues());
+  targetSheet.getRange(newRow,3).setValues(formSheet.getRange(lastSubmissionRow,priceCol).getValues());
+  targetSheet.getRange(newRow,4).setValues(formSheet.getRange(lastSubmissionRow,assetHeldCol).getValues());
+  targetSheet.getRange(newRow,5).setValues(formSheet.getRange(lastSubmissionRow,currHeldCol).getValues());
+  targetSheet.getRange(newRow,6).setValues(formSheet.getRange(lastSubmissionRow,balanceCol).getValues());
   //Latest new balance
-  targetSheet.getRange(2,4).setValues(formSheet.getRange(lastSubmissionRow,9).getValues());
+  targetSheet.getRange(2,4).setValues(formSheet.getRange(lastSubmissionRow,balanceCol).getValues());
   //P/L calculation
   targetSheet.getRange(newRow,7).setValue('=IF(B'+newRow+' = "sell", (1-(F'+(newRow-1)+'/F'+newRow+')),)');
   
@@ -61,8 +76,8 @@ function newSheet(targetSheetName){
   targetSheet.getRange(1,3).setValue("Starting Balance");
   targetSheet.getRange(1,4).setValue("Latest Balance");
   targetSheet.getRange(1,5).setValue("P/L");
-  targetSheet.getRange("H1:I1").mergeAcross();
-  targetSheet.getRange("H1").setValue("% Profitable Trades");
+  targetSheet.getRange("F1:G2").mergeAcross();
+  targetSheet.getRange("F1").setValue("% Profitable Trades");
   targetSheet.getRange(1,8).setValue("Best Trade");
   targetSheet.getRange(1,9).setValue("Worst Trade");
   targetSheet.getRange(2,8).setValue("=MAX(G5:G300)");
@@ -78,17 +93,17 @@ function newSheet(targetSheetName){
   targetSheet.getRange(4,7).setValue("% Profit");
   
   //Add colour
-  targetSheet.getRange("A1:I1").setBackgroundRGB(147, 204, 234);
-  targetSheet.getRange("A4:I4").setBackgroundRGB(147, 204, 234);
-  targetSheet.getRange("A4:I4").setBorder(true, false, false, false, false, false);
+  targetSheet.getRange("A1:I1").setBackgroundRGB(147, 204, 234).setFontWeight("bold");
+  targetSheet.getRange("A4:I4").setBackgroundRGB(147, 204, 234).setBorder(true, false, false, false, false, false).setFontWeight("bold");
+
   
   //Set sparkline row height
   targetSheet.setRowHeight(3, 70);
   
   //Fill in data from form responses sheet
-  targetSheet.getRange("A2").setValue(formSheet.getRange(lastSubmissionRow, 4).getValue()+':'+formSheet.getRange(lastSubmissionRow, 3).getValue());
-  targetSheet.getRange("B2").setValue(formSheet.getRange(lastSubmissionRow, 2).getValue());
-  targetSheet.getRange("C2").setValue(formSheet.getRange(lastSubmissionRow, 10).getValue());
+  targetSheet.getRange("A2").setValue(formSheet.getRange(lastSubmissionRow, assetNameCol).getValue()+':'+formSheet.getRange(lastSubmissionRow, currNameCol).getValue());
+  targetSheet.getRange("B2").setValue(formSheet.getRange(lastSubmissionRow, exchangeNameCol).getValue());
+  targetSheet.getRange("C2").setValue(formSheet.getRange(lastSubmissionRow, balanceCol).getValue());
   
   //P/L formula
   targetSheet.getRange("E2").setValue("=IF((1-D2/C2) > 1, (1-D2/C2), -(1-D2/C2))");
