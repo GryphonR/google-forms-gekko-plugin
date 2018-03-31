@@ -51,7 +51,9 @@ NOTE - First version of readme had these in the wrong order which will result in
 * Go back to the google form edit screen. In the three dot menu, select Get Pre-filled link.
 * A new form will open. Fill in each field with the name of the question above it so we can identify it in the next steps.
 * Click Get Link, then Copy link in the bottom left popup.
-* Paste this link as a comment in your CLI settings file. Copy the form ID and each question ID into the gforms.config object in your command line config file.
+* Paste this link as a comment in your CLI settings file. Copy the form ID and each question ID into the gforms.config object in your command line config file. It should look something like this:
+
+![alt text](https://i.imgur.com/JLXzKRQ.png)
 
 All done, take it for a spin :) 
 
