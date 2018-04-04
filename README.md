@@ -1,8 +1,6 @@
 # Google Forms Gekko Plugin
 A gekko plugin for live trading that submits all trades to a google spreadsheet through Forms
 
-**Very Alpha** I've only tested this for a few days so far... but then there isn't much too it :) Any feedback/merge requests appreciated!
-
 Setup of this plugin is a little involved, but it works for me and I've seen others asking for simillar functionality, so here's a share.
 
 ## What it does
