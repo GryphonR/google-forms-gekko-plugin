@@ -23,7 +23,7 @@ npm i require
 ```
 
 ## Setup in Google Drive
-* Make a copy of [this google form](https://drive.google.com/open?id=1DlRinAn1aix3yNOMrook3m5_B7k_d676) (Right Click, Make Copy) into your google drive. 
+* Make a copy of [this google form](https://drive.google.com/open?id=1DlRinAn1aix3yNOMrook3m5_B7k_d676) (Right Click, Make Copy) into your google drive. In the responses tab of the form, ensure that it is set to accept responses (my example one is set to not accept responses) 
 
    **OR**
 * In your Google Drive, create a new Form.
