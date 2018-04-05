@@ -9,7 +9,7 @@ One form can be used to submit data from all bots, a new sheet is automatically 
 Note that the % profitable counts any multiple trades in response to one bit of advice as gekko adjusts it's buy/sell price, so won't align with % profitable advice.
 
 Each sheet looks like this:
-![alt text](https://i.imgur.com/U2K3QPn.png "Unrealistically Successful Example")
+![alt text](https://i.imgur.com/YLX21xs.png "Example")
 
 ## Setup in Gekko
 * Download/Clone this repo.
