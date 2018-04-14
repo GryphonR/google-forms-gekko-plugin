@@ -39,7 +39,11 @@ npm i require
   * Portfolio Balance
  
 
-* Once you have copied or created the form, link it to a spreadsheet (small green button in responses tab), and rename the responses sheet (tab at the bottom) "Form Responses" (Important it's exact as the code reffers to that sheet by name)
+* Once you have copied or created the form, link it to a spreadsheet (small green button in responses tab)
+* In the spreadsheet, rename the 'Form response 1' tab at the bottom to "Form Responses" (Important it's exact as the code reffers to that sheet by name)
+
+     ![alt text](https://i.imgur.com/CyxZ6dD.png "Example")
+
 * Open the google script editor (Tools> Script Editor) 
   * Copy in the code from googleSheetsScript.gs. Save it.
   * Go to Edit>Current Project's Triggers. From the dropdowns set it to Run "onFormSubmit" Trigger From "Spreadsheet" "OnFormSubmit" (Theoretically the onFormSubmit function in code should be triggered by this anyway, but it didn't seem to work until I added the trigger manually... ymmv)
