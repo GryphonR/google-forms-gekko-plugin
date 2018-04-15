@@ -13,7 +13,7 @@ Each sheet looks like this:
 ## Setup in Gekko
 * Download/Clone this repo.
 * Copy the gforms.js into gekko/plugins - this is the main plugin code.
-* Copy the contents of the downloaded plugins.js file into gekko/plugins.js between the existing plugins. This registers the plugin with Gekko
+* Copy the ***contents*** of the downloaded plugins.js file into gekko/plugins.js between the existing plugins. This registers the plugin with Gekko
 * Copy the code from the downloaded sample-config.js into your CLI config file.
 
 Finally, the 'require' module is needed - in your gekko root run
