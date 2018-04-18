@@ -7,18 +7,17 @@
 
 
 config.gforms = {
-  // Posts to a google form every time a trade is made
-  enabled: false,
+  enabled: true,
   //Form ID - the long code from the form url
   formID: '',
-  //Form question ID's - get them from a prefilled link
-  exchange: '',
-  currency: '',
-  asset: '',
-  action: '',
-  price: '',
-  assetCount: '',
-  currencyCount: '',
-  portfolioBalance: '',
-  balance: ''
+  //Form question ID's - get them from a prefilled link. May already be correct if you copied my form
+  exchange: '1346916648',
+  currency: '1743858251',
+  asset: '105864059',
+  action: '68010386',
+  assetCount: '3616735',
+  price: '1463011579',
+  currencyCount: '433943481',
+  balance: '620326103'
+  advicePrice: '1202282384',
 };
