@@ -17,17 +17,25 @@ var gforms = function(done) {
   this.formID = gfc.formID;
   this.formUrl = 'https://docs.google.com/forms/d/e/' + this.formID + '/formResponse?usp=pp_url&'
 
+  //Track advice, linked to trades
+  this.advicePrice = 0;
+
   this.done = done;
   this.setup();
 };
 
 gforms.prototype.setup = function(done) {
   var setupGforms = function(err, result) {
-    console.log('gForms Plugin Active. Any new trades will be sent to your google form');
+    log.info('gForms Plugin Active. Any new trades will be sent to your google form');
 
   };
   setupGforms.call(this)
 
+};
+
+gforms.prototype.processAdvice = function(advice) {
+  //Get advice price for pair
+  this.advicePrice = advice.candle.close;
 };
 
 
@@ -49,10 +57,10 @@ gforms.prototype.processTrade = function(trade) {
     'entry.' + gfc.price + '=' + trade.price + '&' +
     'entry.' + gfc.assetCount + '=' + trade.portfolio.asset + '&' +
     'entry.' + gfc.currencyCount + '=' + trade.portfolio.currency + '&' +
-    'entry.' + gfc.portfolioBalance + '=' + trade.portfolio.balance + '&' +
+    'entry.' + gfc.advicePrice + '=' + this.advicePrice + '&' +
     'entry.' + gfc.balance + '=' + trade.balance;
 
-  //console.log(this.formUrl + dataString);
+  //log.info(this.formUrl + dataString);
 
   request.post(this.formUrl + dataString + '&submit=Submit', function(error, response) {
     //console.log('error:', error); // Print the error if one occurred
