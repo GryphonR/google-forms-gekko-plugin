@@ -35,9 +35,9 @@ npm i require
   * Action
   * Asset Held 
   * Price 
-  * Currency Held
-  * Advice Price
+  * Currency Held  
   * Balance
+  * Advice Price
  
 
 * Once you have copied or created the form, link it to a spreadsheet (small green button in responses tab)
