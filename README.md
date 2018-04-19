@@ -7,6 +7,8 @@ Setup of this plugin is a little involved, but it works for me and I've seen oth
 Each time gekko completes a trade (live or paper) it updates a google sheet with the trade price and new balances via a post request to a google form. 
 One form can be used to submit data from all bots, a new sheet is automatically created for each pair and exchange combination. Each sheet has a basic list of trades and overall P/L as well as % profitable trades, as well as some pretty graphs.
 
+***Update: (19/4/18)*** Added the price at which advice is given to the sheet, this allows slippage calculation too
+
 Each sheet looks like this:
 ![alt text](https://i.imgur.com/YLX21xs.png "Example")
 
@@ -34,8 +36,8 @@ npm i require
   * Asset Held 
   * Price 
   * Currency Held
-  * Initial Balance
-  * Portfolio Balance
+  * Advice Price
+  * Balance
  
 
 * Once you have copied or created the form, link it to a spreadsheet (small green button in responses tab)
