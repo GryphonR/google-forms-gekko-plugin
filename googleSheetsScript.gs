@@ -69,9 +69,9 @@ function addEntry(targetSheet){
   
   var advicePrice = formSheet.getRange(lastSubmissionRow,advicePriceCol).getValues();
   if(targetSheet.getRange(newRow,2).getValue() == 'sell'){
-    targetSheet.getRange(newRow,11).setValue('=1-(J7/C7)');
+    targetSheet.getRange(newRow,11).setValue('=1-(J'+newRow+'/C'+newRow+')');
   }else{
-    targetSheet.getRange(newRow,11).setValue('=1-(C7/J7)');
+    targetSheet.getRange(newRow,11).setValue('=1-(C'+newRow+'/J'+newRow+')');
   }
   
 }
