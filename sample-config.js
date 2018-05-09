@@ -18,6 +18,6 @@ config.gforms = {
   assetCount: '3616735',
   price: '1463011579',
   currencyCount: '433943481',
-  balance: '620326103'
-  advicePrice: '1202282384',
+  balance: '620326103',
+  advicePrice: '1202282384'
 };
