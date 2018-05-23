@@ -19,6 +19,7 @@ var gforms = function(done) {
 
   //Track advice, linked to trades
   this.advicePrice = 0;
+  this.adviceTime = 0;
 
   this.done = done;
   this.setup();
@@ -34,21 +35,20 @@ gforms.prototype.setup = function(done) {
 };
 
 gforms.prototype.processAdvice = function(advice) {
-  //Get advice price for pair
+  //Get advice price and time
   this.advicePrice = advice.candle.close;
+  this.adviceTime = Date.now();
 };
-
-
-// &entry.1346916648=exchange&entry.1743858251=currency&entry.105864059=Asset&entry.68010386=Event&
-//entry.1463011579=Price&entry.1529244935=Date&entry.3616735=AssetInPorf&entry.433943481=CurrenInPort&
-//entry.1202282384=PortBalance&entry.620326103=Balance
 
 gforms.prototype.processTrade = function(trade) {
   let currency = config.watch.currency;
   let asset = config.watch.asset;
   let exchange = config.watch.exchange;
+  let tradeTime = Date.now();
 
-  //build up string
+  let timeToComplete = (tradeTime - this.adviceTime)*60000;//Difference in ms, converted to minutes
+
+  //build up data string
   let dataString =
     'entry.' + gfc.exchange + '=' + exchange + '&' +
     'entry.' + gfc.currency + '=' + currency + '&' +
@@ -58,14 +58,13 @@ gforms.prototype.processTrade = function(trade) {
     'entry.' + gfc.assetCount + '=' + trade.portfolio.asset + '&' +
     'entry.' + gfc.currencyCount + '=' + trade.portfolio.currency + '&' +
     'entry.' + gfc.advicePrice + '=' + this.advicePrice + '&' +
+    'entry.' + gfc.timeToComplete + '=' + timeToComplete + '&' +
+    'entry.' + gfc.tag + '=' + gfc.botTag + '&' +
     'entry.' + gfc.balance + '=' + trade.balance;
 
   //log.info(this.formUrl + dataString);
 
-  request.post(this.formUrl + dataString + '&submit=Submit', function(error, response) {
-    //console.log('error:', error); // Print the error if one occurred
-    //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  });
+  request.post(this.formUrl + dataString + '&submit=Submit', function(error, response) {});
 
 
 };
