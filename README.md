@@ -1,4 +1,4 @@
-# Google Forms Gekko Plugin
+# Google Forms Gekko Plugin (V2.1)
 A gekko plugin for live trading that submits all trades to a google spreadsheet through Forms
 
 NOTE: Main branch is now V2.1 and a little buggy. For stable, select release tagged V1 (Branch > Tags> V1)
