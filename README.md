@@ -12,7 +12,7 @@ Profit and loss in a FIAT currency at time of trade is also recorded using the c
 
 
 Each sheet looks like this:
-![alt text](https://i.imgur.com/1fdSGJe.png "Example")
+![alt text](https://i.imgur.com/pDQrveG.png "Example")
 ^From testing with a paper trader set up purely to generate lots of trades - I'll get a better image when I have one!
 
 ## Setup in Gekko
