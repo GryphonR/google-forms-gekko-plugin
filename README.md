@@ -1,13 +1,15 @@
 # Google Forms Gekko Plugin (V2.1)
 A gekko plugin for live trading that submits all trades to a google spreadsheet through Forms
 
-NOTE: Main branch is now V2.1 and a little buggy. For stable, select release tagged V1 (Branch > Tags> V1)
+NOTE: Main branch is now V2.1. For legacy, go to the V1 tag (Branch > Tags> V1).
 
 
 ## What it does
 Each time gekko completes a trade (live or paper) it updates a google sheet with the trade price and new balances via a post request to a google form. 
 One form can be used to submit data from all bots, a new sheet is automatically created for each pair and exchange combination. Each sheet has a basic list of trades and overall P/L as well as % profitable trades, slippage from advice price, exposure time, and time taken to fill the order.
 Profit and loss in a FIAT currency at time of trade is also recorded using the cryptocompare API - Useful if you need to do tax calculations.
+
+The plugin can only log values gekko gives it, and relies on the gekko trade event being triggered. Recent versions of gekko on the develop branch have not been emmitting the trade event, and not always reporting figures that agree with the exchange
 
 
 
@@ -45,7 +47,8 @@ npm i require --save
   
 ## Link the two!
 * From the instructions in the google sheet, you should have your prefilled form link on the clipboard.
-* Paste into the prefill setting in your cli config
+* Paste into the prefill field in your cli config.
+* Add a tag for your bot in the 'tag' field.
 
 When the first trade comes in google will need your permission to contact an outside service (cryptocompare). This is to get the FIAT price at the time of the trade. If this makes the first response in the form fail to generate a new tab, go to tools>script editor, at the top, select function onFormSubmit, and press the play button. This will prompt it to ask for permission.
 
