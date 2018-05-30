@@ -9,7 +9,8 @@ Each time gekko completes a trade (live or paper) it updates a google sheet with
 One form can be used to submit data from all bots, a new sheet is automatically created for each pair and exchange combination. Each sheet has a basic list of trades and overall P/L as well as % profitable trades, slippage from advice price, exposure time, and time taken to fill the order.
 Profit and loss in a FIAT currency at time of trade is also recorded using the cryptocompare API - Useful if you need to do tax calculations.
 
-The plugin can only log values gekko gives it, and relies on the gekko trade event being triggered. Recent versions of gekko on the develop branch have not been emmitting the trade event, and not always reporting figures that agree with the exchange
+The plugin can only log values gekko gives it, and relies on the gekko trade event being triggered. Recent versions of gekko on the develop branch have not been emmitting the trade event, and not always reporting figures that agree with the exchange.
+A fix for the emit event triggering (as of 5/2018) was suggested by xFFFFF here: https://forum.gekko.wizb.it/thread-56609-post-58687.html#pid58687
 
 
 
