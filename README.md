@@ -25,7 +25,7 @@ Each sheet looks like this:
 {
     name: 'Google Forms',
     description: 'Logs Trades to Google Forms',
-    slug: 'gforms'
+    slug: 'gforms',
     async: false,
     modes: ['realtime'],
     dependencies: [{
