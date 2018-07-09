@@ -71,7 +71,6 @@ gforms.prototype.processAdvice = function(advice) {
   //Get advice price and time
   this.advicePrice = advice.currentPrice;
   this.adviceTime = Date.now();
-  done();
 };
 
 gforms.prototype.processTrade = function(processTradeCompleted) {
@@ -116,7 +115,6 @@ gforms.prototype.processTrade = function(processTradeCompleted) {
 
   request.post(this.formUrl + dataString + '&submit=Submit', function(error, response) {});
 
-  done();
 
 };
 
