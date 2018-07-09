@@ -13,6 +13,7 @@ var gfc = config.gforms;
 var gforms = function(done) {
   _.bindAll(this);
 
+this.currentPrice = 0;
 
   //Track advice, linked to trades
   this.advicePrice = 0;
@@ -61,13 +62,19 @@ gforms.prototype.setup = function(done) {
 
 };
 
+gforms.prototype.processCandle = function(candle, done) {
+  this.currentPrice = candle.close;
+  done();
+}
+
 gforms.prototype.processAdvice = function(advice) {
   //Get advice price and time
-  this.advicePrice = advice.candle.close;
+  this.advicePrice = advice.currentPrice;
   this.adviceTime = Date.now();
+  done();
 };
 
-gforms.prototype.processTrade = function(trade) {
+gforms.prototype.processTrade = function(processTradeCompleted) {
   let currency = config.watch.currency;
   let asset = config.watch.asset;
   let exchange = config.watch.exchange;
@@ -90,7 +97,7 @@ gforms.prototype.processTrade = function(trade) {
     'entry.' + this.questions[10] + '=' + timeToComplete;
 
   /*
-  Index: (-1 for array index
+  Index: (-1 for array index)
   1: Tag
   2: Exchange
   3: Currency
@@ -109,6 +116,7 @@ gforms.prototype.processTrade = function(trade) {
 
   request.post(this.formUrl + dataString + '&submit=Submit', function(error, response) {});
 
+  done();
 
 };
 
