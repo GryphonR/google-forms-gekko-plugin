@@ -73,7 +73,7 @@ gforms.prototype.processAdvice = function(advice) {
   this.adviceTime = Date.now();
 };
 
-gforms.prototype.processTradeCompleted = function(TradeCompleted) {
+gforms.prototype.processTradeCompleted = function(trade) {
   let currency = config.watch.currency;
   let asset = config.watch.asset;
   let exchange = config.watch.exchange;
