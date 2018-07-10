@@ -69,7 +69,7 @@ gforms.prototype.processCandle = function(candle, done) {
 
 gforms.prototype.processAdvice = function(advice) {
   //Get advice price and time
-  this.advicePrice = advice.currentPrice;
+  this.advicePrice = this.currentPrice;
   this.adviceTime = Date.now();
 };
 
