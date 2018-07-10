@@ -1,17 +1,13 @@
-# Google Forms Gekko Plugin (V2.1)
+# Google Forms Gekko Plugin (V2.1.1)
+
+V2.1.1 update for compatibility with gekko 0.6.x
+
 A gekko plugin for live trading that submits all trades to a google spreadsheet through Forms
 
-Warning: The latest (30/5/18) versions of gekko do not emit the trade event that this plugin relies on! You need to find a fix or use an older version of gekko until this is fixed in the develop branch.
-
 ## What it does
-Each time gekko completes a trade (live or paper) it updates a google sheet with the trade price and new balances via a post request to a google form. 
+Each time gekko completes a trade (live or paper) it updates a google sheet with the trade price and new balances via a post request to a google form.
 One form can be used to submit data from all bots, a new sheet is automatically created for each pair and exchange combination. Each sheet has a basic list of trades and overall P/L as well as % profitable trades, slippage from advice price, exposure time, and time taken to fill the order.
 Profit and loss in a FIAT currency at time of trade is also recorded using the cryptocompare API - Useful if you need to do tax calculations.
-
-The plugin can only log values gekko gives it, and relies on the gekko trade event being triggered. Recent versions of gekko on the develop branch have not been emmitting the trade event, and not always reporting figures that agree with the exchange.
-A fix for the emit event triggering (as of 5/2018) was suggested by xFFFFF here: https://forum.gekko.wizb.it/thread-56609-post-58687.html#pid58687
-
-
 
 Each sheet looks like this:
 ![alt text](https://i.imgur.com/pDQrveG.png "Example")
@@ -42,9 +38,9 @@ npm i require --save
 ```
 
 ## Setup in Google Drive
-* Make a copy of [this google sheet](https://drive.google.com/drive/folders/1z8DTSmIa6W4tyupwOGPsBSDTbhKSYoo0?usp=sharing) (Right Click, Make Copy) into your google drive. 
+* Make a copy of [this google sheet](https://drive.google.com/drive/folders/1z8DTSmIa6W4tyupwOGPsBSDTbhKSYoo0?usp=sharing) (Right Click, Make Copy) into your google drive.
 * In the Config tab of the copied sheet, follow the setup instructions.
-  
+
 ## Link the two!
 * From the instructions in the google sheet, you should have your prefilled form link on the clipboard.
 * Paste into the prefill field in your cli config.
