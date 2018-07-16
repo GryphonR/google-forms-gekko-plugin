@@ -46,9 +46,7 @@ npm i require --save
 * Paste into the prefill field in your cli config.
 * Add a tag for your bot in the 'tag' field.
 
-When the first trade comes in google will need your permission to contact an outside service (cryptocompare). This is to get the FIAT price at the time of the trade. If this makes the first response in the form fail to generate a new tab, go to tools>script editor, at the top, select function onFormSubmit, and press the play button. This will prompt it to ask for permission.
-
-Note that it will take a couple of sells before all the sparkline graphs start working properly - until then they'll all read #NA.
+Note that it will take a couple of sells before all the sparkline graphs start working properly - until then they'll all read #NA. If  the first recorded action is a sell you will need to work out the profit for that yourself and add it to the spreadsheet.
 ___
 If you want to leave a tip, go give it to askmike and support gekko! If you've already done that and still want to leave a tip, thanks!
 
