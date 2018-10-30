@@ -13,7 +13,8 @@ Each sheet looks like this:
 ![alt text](https://i.imgur.com/pDQrveG.png "Example")
 ^From testing with a paper trader set up purely to generate lots of trades - I'll get a better image when I have one!
 
-## Setup in Gekko
+## Setup Instructions:
+### Setup on Gekko host
 * Download/Clone this repo.
 * Copy the gforms.js into gekko/plugins - this is the main plugin code.
 * Copy the code below into gekko/plugins.js, between the existing plugins. This registers the plugin with Gekko.
@@ -37,11 +38,11 @@ Finally, the 'require' module is needed - in your gekko root run
 npm i require --save
 ```
 
-## Setup in Google Drive
+### Setup in Google Drive
 * Make a copy of [this google sheet](https://drive.google.com/drive/folders/1z8DTSmIa6W4tyupwOGPsBSDTbhKSYoo0?usp=sharing) (Right Click, Make Copy) into your google drive.
 * In the Config tab of the copied sheet, follow the setup instructions.
 
-## Link the two!
+### Link the two!
 * From the instructions in the google sheet, you should have your prefilled form link on the clipboard.
 * Paste into the prefill field in your cli config.
 * Add a tag for your bot in the 'tag' field.
