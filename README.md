@@ -50,4 +50,4 @@ Note that it will take a couple of sells before all the sparkline graphs start w
 ___
 If you want to leave a tip, go give it to askmike and support gekko! If you've already done that and still want to leave a tip, thanks!
 
-LTC: Lapmuu1Th2BGBMG6vVyM83swoT8Qc6PiZP
+BTC: 3CLL1z3jvPTo2BVUNxFWsAgSHhwXXZgqb1
