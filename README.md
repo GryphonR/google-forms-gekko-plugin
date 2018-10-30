@@ -44,7 +44,7 @@ npm i require --save
 
 ### Link the two!
 * From the instructions in the google sheet, you should have your prefilled form link on the clipboard.
-* Paste into the prefill field in your cli config.
+* Paste into the prefill field in your gekko cli config.js file.
 * Add a tag for your bot in the 'tag' field.
 
 Note that it will take a couple of sells before all the sparkline graphs start working properly - until then they'll all read #NA. If  the first recorded action is a sell you will need to work out the profit for that yourself and add it to the spreadsheet.
